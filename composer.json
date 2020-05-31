@@ -1,0 +1,37 @@
+{
+    "name": "memochou1993/laravel-package-example",
+    "description": "",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Memo Chou",
+            "email": "memochou1993@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.4"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^5.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "MemoChou1993\\Calculator\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MemoChou1993\\Calculator\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MemoChou1993\\Calculator\\CalculatorServiceProvider"
+            ],
+            "aliases": {
+                "Calculator": "MemoChou1993\\Calculator\\Facades\\Calculator"
+            }
+        }
+    }
+}
